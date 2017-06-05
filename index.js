@@ -98,19 +98,19 @@ app.post("/talent_employer", function (req, res) {
         speech = "Seems like some problem. Speak again.";
     }
     finally {
-        if (messages.length > 0) {
-            return res.json({
-                speech: messages[0].speech,
-                messages: messages,
-                source: 'glasssquid_faq'
-            });
-        } else {
-            return res.json({
-                speech: speech,
-                displayText: speech,
-                source: 'glasssquid_faq'
-            });
-        }
+        // if (messages.length > 0) {
+        //     return res.json({
+        //         speech: messages[0].speech,
+        //         messages: messages,
+        //         source: 'glasssquid_faq'
+        //     });
+        // } else {
+        //     return res.json({
+        //         speech: speech,
+        //         displayText: speech,
+        //         source: 'glasssquid_faq'
+        //     });
+        // }
     }
 
 
