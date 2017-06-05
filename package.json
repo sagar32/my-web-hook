@@ -1,0 +1,23 @@
+{
+  "name": "my-web-hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagar32/my-web-hook.git"
+  },
+  "author": "sagar chopada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagar32/my-web-hook/issues"
+  },
+  "homepage": "https://github.com/sagar32/my-web-hook#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
