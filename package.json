@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sagar32/my-web-hook#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "request": "^2.81.0"
   }
 }
