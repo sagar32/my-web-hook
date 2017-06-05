@@ -1,11 +1,17 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var session = require('express-session');
 var request = require('request');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(session({ secret: 'glassq' }));
+
+var mySession;
+var sid;
 
 app.get('/', function (req, res) {
     res.send("Hello Sagar...!");
