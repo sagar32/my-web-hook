@@ -11,14 +11,14 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'glassq' }));
 
 var mySession;
-var sid;
+// var sid;
 
 app.get('/', function (req, res) {
     res.send("Hello Sagar...!");
 });
 app.post("/talent_employer", function (req, res) {
     mySession = req.session;
-    sid = req.sessionID;
+    // sid = req.sessionID;
     var result = req.body.result;
     //make fast
     /**
@@ -32,7 +32,7 @@ app.post("/talent_employer", function (req, res) {
             json: {
                 query: text,
                 lang: "en",
-                sessionId: sid
+                sessionId: "abcdefghijklmn123456789"
             },
             headers: { "Authorization": "Bearer c594a86ef69346ddb7e410631f9603d7" }
         }, function (error, response, body) {
@@ -56,7 +56,7 @@ app.post("/talent_employer", function (req, res) {
             json: {
                 query: text,
                 lang: "en",
-                sessionId: sid
+                sessionId: "abcdefghijklmn123456789"
             },
             headers: { "Authorization": "Bearer 373788d7794e4493bb15560d19efda3f" }
         }, function (error, response, body) {
