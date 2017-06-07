@@ -24,7 +24,7 @@ app.post("/talent_employer", function (req, res) {
     var messages = [];
     if (result.contexts[0].name == 'usertype' && result.action == "i_am") {
         mySession.userType = result.contexts[0].parameters.userType;
-        speech = "Okay you are " + mySession.userType + ". What you want to know about glasssquid.io?";
+        speech = "What do you want to know about glasssquid.io?";
         return res.json({
             speech: speech,
             displayText: speech,
