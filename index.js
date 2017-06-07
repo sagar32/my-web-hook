@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 });
 app.post("/talent_employer", function (req, res) {
     mySession = req.session;
-    sid = req.sessionID;
+    sid = req.body.sessionId;
     var result = req.body.result;
     var getKey = 0;
     result.contexts.map(function (val, key) {
@@ -50,7 +50,7 @@ app.post("/talent_employer", function (req, res) {
             json: {
                 query: text,
                 lang: "en",
-                sessionId: "abcdefghijklmn123456789"
+                sessionId: sid
             },
             headers: { "Authorization": "Bearer c594a86ef69346ddb7e410631f9603d7" }
         }, function (error, response, body) {
@@ -74,7 +74,7 @@ app.post("/talent_employer", function (req, res) {
             json: {
                 query: text,
                 lang: "en",
-                sessionId: "abcdefghijklmn123456789"
+                sessionId: sid
             },
             headers: { "Authorization": "Bearer 373788d7794e4493bb15560d19efda3f" }
         }, function (error, response, body) {
@@ -87,6 +87,7 @@ app.post("/talent_employer", function (req, res) {
             }
         });
     } else {
+        speech="May i know, you are talent or employer?"
         return res.json({
             speech: speech,
             displayText: speech,
