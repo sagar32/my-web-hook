@@ -20,10 +20,17 @@ app.post("/talent_employer", function (req, res) {
     mySession = req.session;
     sid = req.sessionID;
     var result = req.body.result;
+    var getKey = 0;
+    result.contexts.map(function (val, key) {
+        if (val.name == "usertype") {
+            getKey = key;
+        }
+    });
+    console.log(getKey);
     var speech = "Seems like some problem. Speak again.";
     var messages = [];
-    if (result.contexts[0].name == 'usertype' && result.action == "i_am") {
-        mySession.userType = result.contexts[0].parameters.userType;
+    if (result.contexts[getKey].name == 'usertype' && result.action == "i_am") {
+        mySession.userType = result.contexts[getKey].parameters.userType;
         speech = "What do you want to know about glasssquid.io?";
         return res.json({
             speech: speech,
