@@ -38,15 +38,15 @@ app.post("/talent_employer", function (req, res) {
         /**
          * if userType not available
          */
-        if (!mySession.userType) {
-            speech = "are you employer or talent?";
-            return res.json({
-                speech: speech,
-                displayText: speech,
-                source: 'glasssquid_faq'
-            });
+        // if (!mySession.userType) {
+        //     speech = "are you employer or talent?";
+        //     return res.json({
+        //         speech: speech,
+        //         displayText: speech,
+        //         source: 'glasssquid_faq'
+        //     });
 
-        }
+        // }
 
         /**
         * if user type Talent
